@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Variables</h2>
+<p>Enter a phone number and click Submit:</p>
+
+<input id="id1" type="number" max="9999999999">
+<button onclick="myFunction()">Submit</button>
+<p id="demo"></p>
+<script>
+var x = 5;
+var y = 6;
+var arr=[1,2,3,4,5];
+arr[3]="sedan"
+var total = x + y;
+var maths=60;
+var physics=80;
+var total1=maths+physics;
+var avg=total1/2;
+function append(value, array = []) {
+  array.push(value)
+  return array
+}
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+function myFunction( str ) {
+  var patt1 = /[a-z|A-Z]/g; 
+  var result = str.match(patt1);
+  return result;
+}
+document.getElementById("demo").innerHTML =
+"The total is: " + total+"<br>"+arr+"<br>"+"the total marks are:"+total1+"<br>"+"the avg marks :"+avg+"<br>"+append(1)+"<br>"+"The temperature in celsiuis:"+toCelsius(77)+"<br>"+myFunction("Is this a good project Janmejay Singh chauhan ?")+"<br>"+Math.round(3.4)+"<br>"+Math.abs(-3.4)+"<br>"+Math.pow(8,2)+"<br>"+Math.sqrt(64)+"<br>"+Math.ceil(4.4)+"<br>"+Math.floor(4.4)+"<br>"+ Math.sin(90 * Math.PI / 180)+"<br>"+Math.cos(0 * Math.PI / 180);
+function myFunction() {
+  var txt = "";
+  if (document.getElementById("id1").validity.rangeOverflow) {
+    txt = "Value too large";
+  } else {
+    txt = "Input OK";
+  } 
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+
