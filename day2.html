@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the date.</p>
+<button onclick="this.innerHTML=Date()">Time is?</button>
+</br>
+</br>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Enter Number</button>
+<p id="p01"></p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script type="text/javascript">
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+var var1 = 0, var2 = 1, var3;
+
+document.write("Here is the Fibonacci series with 10 values : ");
+while(var1<40)
+{
+document.write(var1 + " ");
+var3 = var1+var2;
+var1 = var2;
+var2 = var3;
+}
+var str = "HTML is the standard markup language for Web pages and With HTML you can create your own Website.";
+document.getElementById("demo1").innerHTML = "The 5th word is:"+"markup"+"<br>"+"The 7th word is:"+"for"+"<br>"+"The 10th word is:"+"and";
+function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 10)  throw "not present";
+    if(x > 100)   throw "not present";
+    if(x > 10) throw "Present"
+    if(x < 100) throw "Present"
+  }
+  catch(err) {
+    message.innerHTML = "Number is " + err;
+  }
+}
+mark=10;
+
+switch(true)
+{
+ case mark >= 10 && mark <= 100:
+  alert("present");
+  break;
+  default:
+  alert("Not present");
+}
+</script>
+
+
+</body>
+</html> 
